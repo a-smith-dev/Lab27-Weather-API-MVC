@@ -1,0 +1,47 @@
+﻿@model Weather
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@Model.CurrentObservation.Name, @Model.CurrentObservation.State</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>@Model.CurrentObservation.Date</th>
+        </tr>
+        <tr style="font-size:64px">
+            <th>@Model.CurrentObservation.Temp F</th>
+            <th><img src="@Model.CurrentObservation.Weatherimage" width="64px" height="64px" class="img-rounded"/></th>
+        </tr>
+        <tr class="end">
+            <th></th>
+            <th>@Model.CurrentObservation.Weather</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dew Point</td>
+            <td>@Model.CurrentObservation.Dewp °F</td>
+        </tr>
+        <tr>
+            <td>Wind Speed</td>
+            <td>@Model.CurrentObservation.Winds mph</td>
+        </tr>
+        <tr>
+            <td>Wind Direction</td>
+            <td>@Model.CurrentObservation.Windd</td>
+        </tr>
+        <tr>
+            <td>Wind Chill</td>
+            <td>@Model.CurrentObservation.WindChill</td>
+        </tr>
+        <tr>
+            <td>Visibility</td>
+            <td>@Model.CurrentObservation.Visibility mi</td>
+        </tr>
+    </tbody>
+</table>
+
+
